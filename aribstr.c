@@ -322,7 +322,7 @@ const DWORD PutKanjiChar(TCHAR *lpszDst, const WORD wCode)
 
 	iconv_close(cd);
 
-	strncpy(lpszDst, xcode, strlen(xcode));
+	strcpy(lpszDst, xcode);
 
 	return strlen(lpszDst);
 }

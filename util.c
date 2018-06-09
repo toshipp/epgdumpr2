@@ -81,6 +81,7 @@ int parseOTHERdesc(unsigned char *data) {
 	descriptor_tag = getBit(data, &boff, 8);
 	descriptor_length = getBit(data, &boff, 8);
 
+        (void)descriptor_tag;
 	/* printf("other desc_tag:0x%x\n", descriptor_tag); */
 
 	return descriptor_length + 2;
