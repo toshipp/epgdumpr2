@@ -5,7 +5,7 @@ HEDDERDEPEND    = eit.h sdt.h aribstr.h ts.h util.h
 
 LANG            = C
 CC              = gcc
-CFLAGS          = -std=c99 -O2 -g -Wall -Werror -Wno-return-type -fsanitize=address
+CFLAGS          = -std=c99 -O2 -g -Wall -Werror -Wno-return-type
 LDFLAGS         =
 LIBS            =
 
