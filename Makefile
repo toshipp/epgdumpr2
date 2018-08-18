@@ -5,17 +5,18 @@ HEDDERDEPEND    = eit.h sdt.h aribstr.h ts.h util.h
 
 LANG            = C
 CC              = gcc
+OPTFLAGS        = -O2
 CFLAGS          = -std=c99 -O2 -g -Wall -Werror -Wno-return-type
 LDFLAGS         =
 LIBS            =
 
 .c.o:
-	${CC} ${CFLAGS} -c $<
+	${CC} ${OPTFLAGS} ${CFLAGS} -c $<
 
 all: ${TARGETS}
 
 ${TARGETS}: ${OBJ_TARGETS}
-	${CC} ${CFLAGS} ${OBJ_TARGETS} -o $@ ${LDFLAGS} ${LIBS}
+	${CC} ${OPTFLAGS} ${CFLAGS} ${OBJ_TARGETS} -o $@ ${LDFLAGS} ${LIBS}
 
 ${OBJ_TARGETS}: ${HEDDERDEPEND}
 

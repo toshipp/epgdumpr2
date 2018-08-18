@@ -336,10 +336,16 @@ int main(int argc, char *argv[])
 		file = argv[2];
 		if(strcmp(file, "-")) {
 			infile = fopen(file, "r");
+                        if(!infile) {
+                            return 1;
+                        }
 			inclose = 1;
 		}
 		if(strcmp(argv[3], "-")) {
 			outfile = fopen(argv[3], "w+");
+                        if(!outfile) {
+                            return 1;
+                        }
 			outclose = 1;
 		}
 	}else{
